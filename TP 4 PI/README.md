@@ -2,7 +2,7 @@
 
 ## Docente: Gonzalo Vera -     
 
-## Alumno/a: Karina Jazmin Barbero      
+## Alumna: Karina Jazmin Barbero      
 
 ## Tecnico superior en telecomunicaciones      
 
