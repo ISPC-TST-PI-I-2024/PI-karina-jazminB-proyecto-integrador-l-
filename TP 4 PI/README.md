@@ -1,3 +1,4 @@
+![alt text](<pi imag 4.jpg>)
 
 ## Docente: Gonzalo Vera -     
 

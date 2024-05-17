@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "karina jazmin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -13.2, "left": -73, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 52.8,
+      "left": -134.95,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-dip-switch-8", "id": "sw1", "top": -22.5, "left": 126.3, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "sw1:1a", "esp:2", "gold", [ "v134.4" ] ],
+    [ "sw1:2a", "esp:D3", "gold", [ "v192", "h-144", "v0", "h-28.8", "v-48" ] ],
+    [ "sw1:3a", "esp:4", "gold", [ "v115.2" ] ],
+    [ "led1:A", "esp:13", "green", [ "v124.8" ] ],
+    [ "led1:C", "r1:1", "black", [ "v0" ] ],
+    [ "r1:2", "esp:GND.1", "black", [ "h0", "v75.6" ] ],
+    [ "sw1:1b", "esp:GND.2", "black", [ "v-9.3", "h-38.4" ] ],
+    [ "sw1:2b", "esp:GND.2", "black", [ "v-28.5", "h-48" ] ],
+    [ "sw1:3b", "esp:GND.2", "black", [ "v-18.9", "h-67.2" ] ]
+  ],
+  "dependencies": {}
+}

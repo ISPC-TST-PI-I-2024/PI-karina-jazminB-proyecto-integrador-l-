@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "author": "karina jazmin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": -23.96, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -22.8,
+      "left": 80.6,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": -22.8, "left": -73, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 43.2,
+      "left": -134.95,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 62.4,
+      "left": 114.65,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 140.6,
+      "left": -144,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 169.4,
+      "left": 134.4,
+      "rotate": 90,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 198.2,
+      "left": 0,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn1:1.l", "esp:2", "green", [ "h-9.6", "v38.4", "h144", "v-19.2", "h96", "v-48" ] ],
+    [ "btn3:1.l", "esp:4", "green", [ "h0", "v-28.8", "h96", "v-76.8" ] ],
+    [ "btn2:1.l", "esp:5", "green", [ "h-9.6", "v-76.8" ] ],
+    [ "r1:1", "led2:C", "black", [ "h0" ] ],
+    [ "led2:A", "esp:12", "green", [ "v0" ] ],
+    [ "led1:A", "esp:19", "green", [ "v38.4" ] ],
+    [ "led1:C", "r2:1", "black", [ "v0" ] ],
+    [ "r2:2", "esp:GND.3", "black", [ "h-9.6", "v-49.2" ] ],
+    [ "r1:2", "esp:GND.1", "black", [ "h0", "v46.8" ] ],
+    [ "btn3:2.l", "esp:GND.3", "black", [ "v9.8", "h115.2", "v-192" ] ],
+    [ "btn1:2.l", "esp:GND.1", "black", [ "h0", "v57.8", "h115.2", "v-115.2" ] ],
+    [
+      "btn2:2.l",
+      "esp:GND.2",
+      "black",
+      [ "v-26", "h38.4", "v-115.2", "h-54.8", "v-75.4", "h-67.2" ]
+    ]
+  ],
+  "dependencies": {}
+}

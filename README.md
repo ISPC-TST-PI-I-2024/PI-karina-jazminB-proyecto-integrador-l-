@@ -1,3 +1,6 @@
+![alt text](<imagen pi 11.jpg>)
+
+
 # PROYECTO INTEGRADOR I  
 
 ## DOCENTE: GONZALO VERA     

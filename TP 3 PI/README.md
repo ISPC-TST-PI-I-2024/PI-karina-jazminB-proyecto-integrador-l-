@@ -1,6 +1,5 @@
 ![alt text](<pi imag 3.jpg>)
 
-
 ## Docente: Gonzalo Vera -     
 
 ## Alumno/a: Karina Jazmin Barbero      
